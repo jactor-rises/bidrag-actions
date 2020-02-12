@@ -5,13 +5,13 @@ echo "Setup maven"
 
 MAVEN_REPO=~/.m2
 MAVEN_SETTINGS="<settings>
-    <servers>
-        <server>
-           <id>maven-release</id>
-           <username>$GITHUB_ACTOR</username>
-           <password>$GITHUB_TOKEN</password>
-      </server>
-    </servers>
+  <servers>
+      <server>
+         <id>jactor-rshared</id>
+         <username>$GITHUB_ACTOR</username>
+         <password>$GITHUB_TOKEN</password>
+    </server>
+  </servers>
   <profiles>
     <profile>
       <id>default</id>
@@ -22,9 +22,9 @@ MAVEN_SETTINGS="<settings>
           <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-          <id>maven-release</id>
+          <id>jactor-rshared</id>
           <name>GitHub felles Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/navikt/maven-release/</url>
+          <url>https://maven.pkg.github.com/jactor-rises/jactor-shared/</url>
         </repository>
       </repositories>
     </profile>
